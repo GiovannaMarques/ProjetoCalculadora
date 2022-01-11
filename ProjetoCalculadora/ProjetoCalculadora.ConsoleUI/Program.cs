@@ -64,11 +64,26 @@ namespace ProjetoCalculadora.ConsoleUI
         public static int Subtrair()
         {
             Console.WriteLine("Qual o primeiro número que você quer subtrair?");
-            int numero1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Qual o segundo número que você quer subtrair?");
-            int numero2 = int.Parse(Console.ReadLine());
+            string numeroInput = Console.ReadLine();
+            int numeroConvertido = 0;
+            bool conversaoDeuCerto = int.TryParse(numeroInput, out numeroConvertido);
 
-            int subtracao = numero1 - numero2;
+            if (conversaoDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+            Console.WriteLine("Qual o segundo número que você quer subtrair?");
+            string numeroDoisInput = Console.ReadLine();
+            int numeroDoisConvertido = 0;
+            bool conversaoDoisDeuCerto = int.TryParse(numeroDoisInput, out numeroDoisConvertido);
+
+            if (conversaoDoisDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+            int subtracao = numeroConvertido - numeroDoisConvertido;
 
             return subtracao;
         }
@@ -76,11 +91,27 @@ namespace ProjetoCalculadora.ConsoleUI
         public static int Divisao()
         {
             Console.WriteLine("Qual o primeiro número que você quer dividir?");
-            int numero1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Qual o segundo número que você quer dividir?");
-            int numero2 = int.Parse(Console.ReadLine());
+            string numeroInput = Console.ReadLine();
+            int numeroConvertido = 0;
+            bool conversaoDeuCerto = int.TryParse(numeroInput, out numeroConvertido);
 
-            int dividir = numero1 / numero2;
+            if (conversaoDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+            Console.WriteLine("Qual o segundo número que você quer dividir?");
+            string numeroDoisInput = Console.ReadLine();
+            int numeroDoisConvertido = 0;
+            bool conversaoDoisDeuCerto = int.TryParse(numeroDoisInput, out numeroDoisConvertido);
+
+            if (conversaoDoisDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+
+            int dividir = numeroConvertido / numeroDoisConvertido;
 
             return dividir;
         }
@@ -88,11 +119,26 @@ namespace ProjetoCalculadora.ConsoleUI
         public static int Multiplicacao()
         {
             Console.WriteLine("Qual o primeiro número que você quer multiplicar?");
-            int numero1 = int.Parse(Console.ReadLine());
-            Console.WriteLine("Qual o segundo número que você quer multiplicar?");
-            int numero2 = int.Parse(Console.ReadLine());
+            string numeroInput = Console.ReadLine();
+            int numeroConvertido = 0;
+            bool conversaoDeuCerto = int.TryParse(numeroInput, out numeroConvertido);
 
-            int multiplicacao = numero1 * numero2;
+            if (conversaoDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+            Console.WriteLine("Qual o segundo número que você quer multiplicar?");
+            string numeroDoisInput = Console.ReadLine();
+            int numeroDoisConvertido = 0;
+            bool conversaoDoisDeuCerto = int.TryParse(numeroDoisInput, out numeroDoisConvertido);
+
+            if (conversaoDoisDeuCerto == false)
+            {
+                Console.WriteLine("Número não reconhecido, desconsiderando conta...");
+            }
+
+            int multiplicacao = numeroConvertido * numeroDoisConvertido;
 
             return multiplicacao;
         }
